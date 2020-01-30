@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteFragment">
+
+    <EditText
+        android:id="@+id/titleEt"
+        android:hint="@string/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/bodyEt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/body"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_below="@+id/titleEt"
+        android:autofillHints="" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_check"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"/>
+
+</RelativeLayout>
