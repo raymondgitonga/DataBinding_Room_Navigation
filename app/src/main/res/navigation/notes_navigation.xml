@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.tosh.roomnav.HomeFragment"
+        android:name="com.tosh.roomnav.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -18,11 +18,15 @@
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
-        android:name="com.tosh.roomnav.AddNoteFragment"
+        android:name="com.tosh.roomnav.ui.AddNoteFragment"
         android:label="fragment_add_note"
         tools:layout="@layout/fragment_add_note" >
         <action
             android:id="@+id/actionSaveNote"
             app:destination="@id/homeFragment" />
+        <argument android:name="note"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.tosh.roomnav.room.Note"/>
     </fragment>
 </navigation>

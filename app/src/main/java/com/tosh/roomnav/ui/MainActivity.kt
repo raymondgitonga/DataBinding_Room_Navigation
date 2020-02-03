@@ -1,10 +1,11 @@
-package com.tosh.roomnav
+package com.tosh.roomnav.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.tosh.roomnav.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navController = Navigation.findNavController(this, R.id.fragment)
+        navController = Navigation.findNavController(this,
+            R.id.fragment
+        )
 
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
